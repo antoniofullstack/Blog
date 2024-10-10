@@ -82,7 +82,6 @@ const createPost = (req, res) => {
         content,
         createdAt,
         userId,
-        user,
       });
     }
   );

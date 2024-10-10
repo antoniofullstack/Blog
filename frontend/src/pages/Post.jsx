@@ -1,12 +1,16 @@
 import { createPost } from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const Post = () => {
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const token = localStorage.getItem('token');
     const title = e.target[0].value;
     const content = e.target[1].value;
     createPost({ title, content }, token);
+    navigate('/');
   };
 
   return (

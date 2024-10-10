@@ -1,4 +1,3 @@
-// frontend/src/context/AuthContext.jsx
 import { createContext, useState, useContext, useEffect } from 'react';
 
 // Cria o contexto
@@ -22,7 +21,6 @@ export const AuthProvider = ({ children }) => {
 
   const login = (token) => {
     setAuth({ isAuthenticated: true, token: token });
-
     localStorage.setItem('token', token);
   };
   const logout = () => {

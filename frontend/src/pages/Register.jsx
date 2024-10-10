@@ -1,6 +1,6 @@
-// frontend/src/components/Register.jsx
 import { useState } from 'react';
 import { registerUser } from '../api';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -8,6 +8,8 @@ function Register() {
     email: '',
     password: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,6 +19,7 @@ function Register() {
     e.preventDefault();
     const result = await registerUser(formData);
     console.log(result);
+    navigate('/login');
   };
 
   return (
