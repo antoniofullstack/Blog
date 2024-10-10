@@ -1,0 +1,31 @@
+/* frontend/src/pages/Home.css */
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.post {
+  background-color: #f9f9f9;
+  color: #555;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.post__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post__content {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post__author,
+.post__date {
+  font-size: 14px;
+  color: #555;
+}
